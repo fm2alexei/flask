@@ -67,7 +67,7 @@ def create():
         error = None
 
         if not title:
-            error = "Title is required."
+            error = "Заголовок обязателен."
 
         if error is not None:
             flash(error)

@@ -2,7 +2,26 @@
 <title>{% block title %}{% endblock %} - НМИЦ АиР</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <nav>
-  <h1><a href="{{ url_for('index') }}">НМИЦ анестезиологии и реаниматологии</a></h1>
+
+  <table style="height: 60px; width: 100%; border-collapse: collapse;" border="0">
+    <tbody>
+    <tr style="height: 30px;">
+    <td style="width: 7.0%; height: 60px;" rowspan="2"><img src="https://www.sechenov.ru/upload/DropMeFiles_abtp8/logo-sechenov-new-itog-04.png" alt="" width="60" height="60" /></td>
+    <td style="width: 38.0%; height: 30px;"><a href="https://www.sechenov.ru/">ФГАОУ ВО Первый МГМУ им. И.М.Сеченова</a></td>
+    <td style="width: 7.0%; height: 60px;" rowspan="2"><img src="https://html-online.com/demo/social-share-buttons/social//twitter.svg" alt="" width="60" height="60" /></td>
+    <td style="width: 38.0%; height: 30px;"><a href="{{ url_for('index') }}">НМИЦ анестезиологии и реаниматологии</a></td>
+    <td style="width: 10%; height: 30px; text-align: right;">Вход</td>
+    </tr>
+    <tr style="height: 30px;">
+    <td style="width: 38.0%; height: 30px;"><a href="https://www.sechenov.ru/">Минздрава РФ (Сеченовский Университет)</a></td>
+    <td style="width: 38.0%; height: 30px;"><a href="{{ url_for('index') }}">(для взрослых)</a></td>
+    <td style="width: 10%; height: 30px; text-align: right;">Регистрация</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- <h4><a href="https://www.sechenov.ru/">ФГАОУ ВО Первый МГМУ им. И.М.Сеченова&nbsp;&nbsp;&nbsp;<br>Минздрава РФ (Сеченовский Университет)</a></h4>
+  <h4><a href="{{ url_for('index') }}">НМИЦ анестезиологии и реаниматологии<br>(для взрослых)</a></h4>
   <ul>
     {% if g.user %}
       <li><span>{{ g.user['username'] }}</span>
@@ -11,7 +30,7 @@
       <li><a href="{{ url_for('auth.register') }}">Регистрация</a>
       <li><a href="{{ url_for('auth.login') }}">Вход</a>
     {% endif %}
-  </ul>
+  </ul> -->
 </nav>
 <section class="content">
   <header>

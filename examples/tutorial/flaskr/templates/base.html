@@ -10,12 +10,20 @@
     <td style="width: 40.0%; height: 30px;"><a href="https://www.sechenov.ru/">ФГАОУ ВО Первый МГМУ им. И.М.Сеченова</a></td>
     <td style="width: 7.0%; height: 60px;" rowspan="2"><img src="https://www.dropbox.com/scl/fi/vcf28hqkrjy7v2atnb3c6/Logo.png?dl=1" alt="" width="80" height="60" /></td>
     <td style="width: 36.0%; height: 30px;"><a href="{{ url_for('index') }}">НМИЦ анестезиологии и реаниматологии</a></td>
-    <td style="width: 10%; height: 30px; text-align: right;">Вход</td>
+    {% if g.user %}
+      <td style="width: 10%; height: 30px; text-align: right;"><a href="{{ url_for('auth.logout') }}">Выход</a></td>
+    {% else %}
+      <td style="width: 10%; height: 30px; text-align: right;"><a href="{{ url_for('auth.login') }}">Вход</a></td>
+    {% endif %}
     </tr>
     <tr style="height: 30px;">
     <td style="width: 38.0%; height: 30px;"><a href="https://www.sechenov.ru/">Минздрава РФ (Сеченовский Университет)</a></td>
     <td style="width: 38.0%; height: 30px;"><a href="{{ url_for('index') }}">(для взрослых)</a></td>
-    <td style="width: 10%; height: 30px; text-align: right;">Регистрация</td>
+    {% if g.user %}
+      <td style="width: 10%; height: 30px; text-align: right;">{{ g.user['username'] }}</td>
+    {% else %}
+      <td style="width: 10%; height: 30px; text-align: right;"><a href="{{ url_for('auth.register') }}">Регистрация</a></td>
+    {% endif %}
     </tr>
     </tbody>
   </table>
@@ -31,6 +39,7 @@
       <li><a href="{{ url_for('auth.login') }}">Вход</a>
     {% endif %}
   </ul> -->
+
 </nav>
 <section class="content">
   <header>

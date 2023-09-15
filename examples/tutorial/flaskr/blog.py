@@ -49,7 +49,7 @@ def get_post(id, check_author=True):
     )
 
     if post is None:
-        abort(404, f"Post id {id} doesn't exist.")
+        abort(404, f"Сообщение #{id} не существует.")
 
     if check_author and post["author_id"] != g.user["id"]:
         abort(403)
@@ -95,7 +95,7 @@ def update(id):
         error = None
 
         if not title:
-            error = "Title is required."
+            error = "Заголовок обязателен."
 
         if error is not None:
             flash(error)

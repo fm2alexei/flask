@@ -1,9 +1,10 @@
+<!-- base.html:  // 2023-07-23..2023-09-20, 2023-09-20 /A @work -->
 <!doctype html>
 <title>{% block title %}{% endblock %} - НМИЦ АиР</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <nav>
 
-<table style="height: 60px; width: 100%; border-collapse: collapse;" border="0">
+<table style="height: 90px; width: 100%; border-collapse: collapse;" border="0">
   <tbody>
     <tr style="height: 30px;">
       <td style="width: 7.0%; height: 60px;" rowspan="2"><img src="https://www.sechenov.ru/upload/DropMeFiles_abtp8/logo-sechenov-new-itog-04.png" alt="" width="60" height="60" /></td>
@@ -24,6 +25,12 @@
       {% else %}
         <td style="width: 10%; height: 30px; text-align: right; vertical-align: top;"><a href="{{ url_for('auth.register') }}">Регистрация</a></td>
       {% endif %}
+    </tr>
+    <tr style="height: 30px; border-style: dashed; border-color: 444444;">
+      <td style="width: 7.0%; height: 30px; text-align: center; vertical-align: top;"><a href="{{ url_for('index') }}">НМИЦ</a></td>
+      <td style="width: 40.0%; height: 30px; text-align: left; vertical-align: top;"><a href="{{ url_for('index') }}">Отдел анализа и мониторинга</a></td>
+      <td style="width: 40.0%; height: 30px; text-align: left; vertical-align: top;" colspan=2><a href="{{ url_for('index') }}">Отдел образовательных программ и науки</a></td>
+      <td style="width: 13.0%; height: 30px; text-align: right; vertical-align: top;"><a href="{{ url_for('index') }}">debug</a></td>
     </tr>
   </tbody>
 </table>

@@ -26,9 +26,17 @@ def create_app(test_config=None):
 	except OSError:
 		pass
 
-	@app.route("/hello")
-	def hello():
-		return "Hello, World!"
+	@app.route("/nmic")
+	def nmic():
+		return "<НМИЦ анестезиологии и реаниматологии (для взрослых)> Описание"
+
+	@app.route("/oaim")
+	def oaim():
+		return "<НМИЦ АиР: Отдел анализа и мониторинга> Описание"
+
+	@app.route("/oopn")
+	def oopn():
+		return "<НМИЦ АиР: Отдел образовательных программ и научной деятельности> Описание"
 
 	# register the database commands
 	from flaskr import db

@@ -1,4 +1,4 @@
-<!-- base.html:  // 2023-07-23..2023-09-20, 2023-09-20 /A @work -->
+<!-- base.html:  // 2023-07-23..2023-09-20, 2023-09-25 /A @work -->
 <!doctype html>
 <title>{% block title %}{% endblock %} - НМИЦ АиР</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -7,9 +7,9 @@
 <table style="height: 90px; width: 100%; border-collapse: collapse;" border="0">
   <tbody>
     <tr style="height: 30px;">
-      <td style="width: 7.0%; height: 60px;" rowspan="2"><img src="https://www.sechenov.ru/upload/DropMeFiles_abtp8/logo-sechenov-new-itog-04.png" alt="" width="60" height="60" /></td>
+      <td style="width: 7.0%; height: 60px;" rowspan="2"><a href="https://www.sechenov.ru/"><img src="https://www.sechenov.ru/upload/DropMeFiles_abtp8/logo-sechenov-new-itog-04.png" alt="" width="60" height="60" /></a></td>
       <td style="width: 40.0%; height: 30px; vertical-align: bottom;"><a href="https://www.sechenov.ru/">ФГАОУ ВО Первый МГМУ им. И.М.Сеченова</a></td>
-      <td style="width: 7.0%; height: 60px;" rowspan="2"><img src="/static/logo_png.png" alt="" width="80" height="60" /></td>
+      <td style="width: 7.0%; height: 60px;" rowspan="2"><a href="{{ url_for('index') }}"><img src="/static/logo_png.png" alt="" width="80" height="60" /></a></td>
       <td style="width: 36.0%; height: 30px; vertical-align: bottom;"><a href="{{ url_for('index') }}">НМИЦ анестезиологии и реаниматологии</a></td>
       {% if g.user %}
         <td style="width: 10%; height: 30px; text-align: right; vertical-align: bottom;"><a href="{{ url_for('auth.logout') }}">Выход</a></td>
@@ -27,7 +27,7 @@
       {% endif %}
     </tr>
     <tr style="height: 30px; border-style: dashed; border-color: 444444;">
-      <td style="width: 7.0%; height: 30px; text-align: center; vertical-align: center;"><a href="{{ url_for('index') }}">НМИЦ</a></td>
+      <td style="width: 7.0%; height: 30px; text-align: center; vertical-align: center;"><a href="{{ url_for('hello') }}">НМИЦ</a></td>
       <td style="width: 40.0%; height: 30px; text-align: left; vertical-align: center;"><a href="{{ url_for('index') }}">Отдел анализа и мониторинга</a></td>
       <td style="width: 40.0%; height: 30px; text-align: left; vertical-align: center;" colspan=2><a href="{{ url_for('index') }}">Отдел образовательных программ и науки</a></td>
       <td style="width: 13.0%; height: 30px; text-align: right; vertical-align: center;"><a href="{{ url_for('index') }}">debug</a></td>

@@ -28,14 +28,17 @@ def create_app(test_config=None):
 
 	@app.route("/nmic")
 	def nmic():
+		print("---> [NMIC] page selected...")
 		return "<НМИЦ анестезиологии и реаниматологии (для взрослых)> Описание"
 
 	@app.route("/oaim")
 	def oaim():
+		print("---> [OAIM] page selected...")
 		return "<НМИЦ АиР: Отдел анализа и мониторинга> Описание"
 
 	@app.route("/oopn")
 	def oopn():
+		print("---> [OOPN] page selected...")
 		return "<НМИЦ АиР: Отдел образовательных программ и научной деятельности> Описание"
 
 	# register the database commands

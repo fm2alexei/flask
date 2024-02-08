@@ -1218,7 +1218,7 @@ class Flask(App):
     def preprocess_request(self) -> ft.ResponseReturnValue | None:
         """Called before the request is dispatched. Calls
         :attr:`url_value_preprocessors` registered with the app and the
-        current blueprint (if any). Then calls :attr:`before_request_funcs`
+        current blueprint(if any). Then calls :attr:`before_request_funcs`
         registered with the app and the blueprint.
 
         If any :meth:`before_request` handler returns a non-None value, the
